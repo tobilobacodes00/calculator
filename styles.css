@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;  
+  margin: 0;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  line-height: 1.6;
+  background-color: #f3f4f8;
+}
+
+h1 {
+  font-family: 'Lobster', cursive, sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 5px;
+  color: #4f3cc9;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #6c6f7b;
+  text-align: center;
+}
+
+#calculator {
+  display: grid;
+  grid-template-rows: auto repeat(5, 1fr);
+  gap: 10px;
+  max-width: 320px;
+  margin: 20px auto;
+  padding: 20px 15px 15px 15px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(79, 60, 201, 0.08);
+}
+
+#search {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #e0e3eb;
+  background: #f7f8fa;
+  color: #4f3cc9;
+  text-align: right;
+  font-family: 'Baloo 2', cursive;
+}
+#search:focus {
+  outline: none;
+  border-color: #4f3cc9;
+  box-shadow: 0 0 5px rgba(79, 60, 201, 0.2);
+}
+#search.input-error::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.button {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  padding: 18px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f3cc9; 
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(79, 60, 201, 0.08);
+}
+.x2{
+    grid-column: span 2;
+}
+
+.button:hover {
+  background-color: #6c63ff; 
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Add to styles.css */
+.input-error {
+  border: 2px solid red !important;
+}
+

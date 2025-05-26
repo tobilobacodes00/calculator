@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>Powered By tobilobaCodes</p>
+    <form id="calculator">
+        <input type="text" id="search" placeholder="0" name="display" required maxlength="16" aria-label="Calculator display">
+        <div class="row">
+            <input type="button" class="x2 button" value="C" onclick="display.value = ''" aria-label="Clear">
+            <input type="button" class="x2 button" value="⌫" onclick="display.value = display.value.toString().slice(0, -1)" aria-label="Backspace">
+        </div>
+        <div class="row">
+            <input class="button" type="button" value="7" onclick="display.value += '7'" aria-label="Seven">
+            <input class="button" type="button" value="8" onclick="display.value += '8'" aria-label="Eight">
+            <input class="button" type="button" value="9" onclick="display.value += '9'" aria-label="Nine">
+            <input class="button" type="button" value="÷" onclick="display.value += '/'" aria-label="Divide">
+        </div>
+        <div class="row">
+            <input class="button" type="button" value="4" onclick="display.value += '4'" aria-label="Four">
+            <input class="button" type="button" value="5" onclick="display.value += '5'" aria-label="Five">
+            <input class="button" type="button" value="6" onclick="display.value += '6'" aria-label="Six">
+            <input class="button" type="button" value="+" onclick="display.value += '+'" aria-label="Add">
+        </div>
+        <div class="row">
+            <input class="button" type="button" value="3" onclick="display.value += '3'" aria-label="Three">
+            <input class="button" type="button" value="2" onclick="display.value += '2'" aria-label="Two">
+            <input class="button" type="button" value="1" onclick="display.value += '1'" aria-label="One">
+            <input class="button" type="button" value="-" onclick="display.value += '-'" aria-label="Subtract">
+        </div>
+        <div class="row">
+            <input class="button" type="button" value="0" onclick="display.value += '0'" aria-label="Zero">
+            <input class="button" type="button" value="." onclick="display.value += '.'" aria-label="Decimal point">
+            <input class="button" type="button" value="×" onclick="display.value += '*'" aria-label="Multiply">
+            <input class="button" id="equal" type="button" value="=" onclick="evaluateInput()" aria-label="Equals">
+        </div>
+    </form>
+</body>
+<script src="script.js" defer></script>
+</html>
