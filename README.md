@@ -14,7 +14,7 @@ A modern, responsive calculator web app built with HTML, CSS, and JavaScript.
 
 ## Demo
 
-[Live Demo](#) 
+[Live Demo]( https://tobilobacodes00.github.io/calculator/) 
 
 ## Getting Started
 
